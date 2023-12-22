@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, Verdana, sans-serif;
+    color: beige;
+    font-size: 10pt;
+}
+main {
+    display: grid;
+    grid-template-areas: "h h" "a n" "f f";
+    position: relative;
+    box-shadow: 0px 7px 20px 0px;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #333333;
+}
+body {
+	background-image: url('kepek/fal.jpg');
+    padding: 20px;
+}
+header {
+    grid-area: h;
+    background-image: url('kepek/sor.jpg');
+    background-size: cover;
+    height: 380px;
+}
+header h1 {
+    padding: 30px 0px 0px 30px;
+    position: absolute;
+    font-family: Garamond;
+    letter-spacing: 4px;
+    font-size: 32px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav {
+    grid-area: n;
+    padding: 10px;
+}
+nav ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+nav ul li {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px 0px 8px 25px;
+    width: 250px;
+    margin: 2px;
+}
+nav ul li:hover {
+    background-color: lightblue;
+    color: white;
+}
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+}
+article {
+    grid-area: a;
+    background-color: black;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 10px;
+    padding: 10px;
+    box-shadow: 0px 7px 5px 0px;
+}
+article h3 {
+    font-size: 15px;
+    padding: 15px 0px 15px 0px;
+}
+article img {
+    float: left;
+    border: 1px solid gray;
+    padding: 5px;
+    width: 23%;
+    height: 60%;
+}
+article ul {
+    list-style-type:square;
+    padding: 0px 10px 20px 205px;
+}
+article ul li {
+    font-size: 15px;
+    padding: 1px;
+}
+article table,th {
+    border: 1px solid white;
+    padding: 2px;
+}
+footer {
+    grid-area: f;
+    background-color: #a9a9a7;
+    text-align: center;
+    padding: 15px;
+    font-size: 9pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*töréspont media query-vel*/
+/*Tablet*/
+@media only screen and (max-width: 700px) {
+    body {
+      width: 100%;
+      font-size: 2vw;
+      padding: 2px;
+    }
+    main {
+        grid-template-areas: "h" "n" "a" "f";
+    }
+    header h1 {
+        padding: 3px 0px 3px 0px;
+        font-size: 21px;
+    }
+    nav {
+        background-color: white;
+        padding: 5px 0px 0px 1px;
+    }
+    nav ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: #d3d3d3;
+    }
+    nav li {
+        border: 1px solid gray;
+        padding: 10px;
+    }
+    nav a {
+        font-size: 110%;
+        border-left: 0px;
+        padding: 0px;
+    }
+    nav .kezdolapli{
+        background-color: #cf0033;
+    }
+    article .keret {
+        grid-template-columns: 1fr;
+        grid-template-rows: 12fr;
+    }
+  }
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 400px) {
+    body {
+        width: 100%;
+        font-size: 5vw;
+    }
+}
